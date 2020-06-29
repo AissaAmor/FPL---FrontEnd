@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <br /><br />
+    <div class="col-5"></div>
+    <div class="col-6">
+      <button type="button" class="btn btn-primary" routerLink="/sondage">
+        Créer Sondage
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">les sondages</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-3 text-primary">Titre</div>
+            <div class="col-3 text-primary">Description</div>
+            <div class="col-2 text-primary">vote</div>
+          </div>
+          <div class="row" *ngFor="let son of sondages; let index = index">
+            <div class="col-3">{{ son.titre }}</div>
+            <div class="col-3">{{ son.description }}</div>
+            <div class="col-2 text-primary">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineRadio1">oui</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2">non</label>
+              </div>
+            </div>
+            <div class="col-3 text-primary">
+              <!-- <i (click)="DuplicateEval(evaluation)" class="material-icons">
+                repeat
+              </i>
+              <i
+              (click)="frame.show()"
+              (click)="getIdEvaluation(evaluation.id_evaluation)"
+              class="material-icons"
+              >
+              add_box
+            </i>
+            <i
+                (click)="deleteEvaluation(evaluation.id_evaluation)"
+                class="material-icons"
+                >
+                delete
+            </i> -->
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
